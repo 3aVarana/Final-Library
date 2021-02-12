@@ -1,10 +1,20 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{B0B39EDC-E7C8-4790-9EF3-F3BE1C1C2C91}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinalLibrary/Models/ReaderBook.cs">
+    <Files>
+      <File FileName="FinalLibrary/Models/Book.cs" Line="9" Column="41" />
+      <File FileName="FinalLibrary/Models/Author.cs" Line="14" Column="1" />
+      <File FileName="FinalLibrary/Models/Reader.cs" Line="12" Column="65" />
+      <File FileName="FinalLibrary/Models/ReaderBook.cs" Line="10" Column="29" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FinalLibrary" expanded="True">
-            <Node name="FinalLibrary" expanded="True" selected="True" />
+            <Node name="FinalLibrary" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="ReaderBook.cs" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
