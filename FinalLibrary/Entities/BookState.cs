@@ -1,4 +1,4 @@
-﻿namespace FinalLibrary.Models
+﻿namespace FinalLibrary.Entities
 {
     public enum BookState
     {

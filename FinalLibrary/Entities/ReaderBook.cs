@@ -1,7 +1,6 @@
 ﻿using System;
-namespace FinalLibrary.Models
+namespace FinalLibrary.Entities
 {
-
     public class ReaderBook
     {
         public int ReaderBookId { get; set; }

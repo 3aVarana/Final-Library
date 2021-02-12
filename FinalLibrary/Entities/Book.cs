@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FinalLibrary.Models
+namespace FinalLibrary.Entities
 {
     public class Book
     {
