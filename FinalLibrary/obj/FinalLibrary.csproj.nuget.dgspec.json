@@ -14,7 +14,7 @@
         "outputPath": "/Users/victorarana/Documents/NET/FinalLibrary/FinalLibrary/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/victorarana/.nuget/NuGet/NuGet.Config"
+          "/Users/victorarana/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -38,6 +38,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.3, )"

@@ -20,6 +20,7 @@ namespace FinalLibrary
         }
 
         public IConfiguration Configuration { get; }
+        private string AllowedHosts = "AllowedHosts";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -27,7 +28,19 @@ namespace FinalLibrary
             services.AddDbContext<LibraryContext>();
             services.AddScoped<ILibraryRepository, LibraryRepositorySql>();
 
-            services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: AllowedHosts,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin();
+                    });
+            });
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +54,8 @@ namespace FinalLibrary
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(AllowedHosts);
 
             app.UseEndpoints(endpoints =>
             {

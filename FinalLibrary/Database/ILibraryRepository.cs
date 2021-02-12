@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using FinalLibrary.Entities;
 
 namespace FinalLibrary.Database
 {
@@ -9,5 +10,8 @@ namespace FinalLibrary.Database
         void Delete<T>(T entity) where T : class;
 
         Task<bool> SaveChangesAsync();
+
+        Task<Book[]> GetAllBooksAsync();
+        Task<Book> GetBookByIdAsync(int id);
     }
 }

@@ -60,3 +60,6 @@
 /Users/victorarana/Documents/NET/FinalLibrary/FinalLibrary/obj/Debug/netcoreapp3.1/FinalLibrary.dll
 /Users/victorarana/Documents/NET/FinalLibrary/FinalLibrary/obj/Debug/netcoreapp3.1/FinalLibrary.pdb
 /Users/victorarana/Documents/NET/FinalLibrary/FinalLibrary/obj/Debug/netcoreapp3.1/FinalLibrary.genruntimeconfig.cache
+/Users/victorarana/Documents/NET/FinalLibrary/FinalLibrary/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/Users/victorarana/Documents/NET/FinalLibrary/FinalLibrary/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/victorarana/Documents/NET/FinalLibrary/FinalLibrary/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll

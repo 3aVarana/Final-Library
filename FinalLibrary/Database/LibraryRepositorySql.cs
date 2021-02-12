@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
+using FinalLibrary.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace FinalLibrary.Database
@@ -25,6 +28,24 @@ namespace FinalLibrary.Database
         {
             _logger.LogInformation($"Removing object of type {entity.GetType()} from context");
             _libraryContext.Remove(entity);
+        }
+
+        public async Task<Book[]> GetAllBooksAsync()
+        {
+            IQueryable<Book> query = _libraryContext.Books
+                .Include(b => b.Authors);
+                
+
+            return await query.ToArrayAsync();
+        }
+
+        public async Task<Book> GetBookByIdAsync(int id)
+        {
+            IQueryable<Book> query = _libraryContext.Books
+                .Where(b => b.BookId == id)
+                .Include(c => c.Authors);
+
+            return await query.FirstOrDefaultAsync();
         }
 
         public async Task<bool> SaveChangesAsync()
